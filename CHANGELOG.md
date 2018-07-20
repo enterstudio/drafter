@@ -1,12 +1,16 @@
 # Drafter Changelog
 
-## master
+## 4.0.0-pre1
 
 ### Breaking
 
-* changes in Enumeration implemetation 
-    * samples are now collected as collection of individual elements
-    * warning on multiple default definitions
+* This release contains numerous changes to enumerations which affect how
+  enumerations are serialised in API Elements.
+    * See [API Elements 1.0](http://apielements.org/) for further specification
+      on the format of the enumerations.
+    * Samples are now collected as collection of individual elements.
+    * The parser will now emit a warning when you define multiple default
+      values for an enumeration.
 
 ## 4.0.0-pre0
 
