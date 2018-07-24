@@ -9,6 +9,7 @@ environment:
 
 build_script:
   - git submodule update --init --recursive
+  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   - bundle install --verbose
   - vcbuild.bat %VS_VERSION%
 
