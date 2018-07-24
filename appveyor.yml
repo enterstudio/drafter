@@ -10,9 +10,10 @@ environment:
 build_script:
   - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
   - gem install --local rubygems-update-2.7.7.gem
-  - update_rubygems
+  - update_rubygems  
+  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
+  
   - git submodule update --init --recursive
-#  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   - bundle install
   - vcbuild.bat %VS_VERSION%
 
