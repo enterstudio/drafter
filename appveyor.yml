@@ -15,6 +15,7 @@ build_script:
   - git submodule update --init --recursive
   - rm Gemfile.lock
   - bundle install
+  - bundle update ffi
   - vcbuild.bat %VS_VERSION%
 
 test_script:
