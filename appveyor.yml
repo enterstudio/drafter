@@ -8,6 +8,7 @@ environment:
     - VS_VERSION: MSVC2015
 
 build_script:
+  - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
   - curl -O http://curl.haxx.se/ca/cacert.pem
   - echo %cd%
   - SET SSL_CERT_FILE=%cd%\cacert.pem
