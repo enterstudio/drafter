@@ -8,8 +8,9 @@ environment:
     - VS_VERSION: MSVC2015
 
 build_script:
-  - git submodule update --init --recursive
+  - gem install bundler 
   - gem update --system
+  - git submodule update --init --recursive
 #  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   - bundle install
   - vcbuild.bat %VS_VERSION%
