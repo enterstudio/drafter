@@ -9,7 +9,6 @@ install:
   - set PATH=C:\Ruby22\bin;%PATH%
 
 build_script:
-  - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
   - curl -O https://curl.haxx.se/ca/cacert.pem
   - SET SSL_CERT_FILE=%cd%\cacert.pem
   
