@@ -1,4 +1,6 @@
-version: 1.0.{build}
+
+   - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
+   - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gemversion: 1.0.{build}
 
 # Operating system (build VM template)
 os: Visual Studio 2015 CTP
@@ -13,6 +15,11 @@ build_script:
   - echo %cd%
   - SET SSL_CERT_FILE=%cd%\cacert.pem
   - echo %SSL_CERT_FILE%
+  
+   - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
+   - gem install --local rubygems-update-2.7.7.gem
+   - update_rubygems
+   
   - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   
   - git submodule update --init --recursive
