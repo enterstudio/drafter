@@ -9,7 +9,9 @@ environment:
 
 build_script:
   - curl -O http://curl.haxx.se/ca/cacert.pem
+  - echo %cd%
   - SET SSL_CERT_FILE=%cd%\cacert.pem
+  - echo %SSL_SERT_FILE%
   - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   
   - git submodule update --init --recursive
