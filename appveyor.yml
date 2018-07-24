@@ -8,13 +8,12 @@ environment:
     - VS_VERSION: MSVC2015
 
 build_script:
-  - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
-  - gem install --local rubygems-update-2.7.7.gem
-  - update_rubygems  
+  - curl -O http://curl.haxx.se/ca/cacert.pem
+  - SET SSL_CERT_FILE=%cd%\cacert.pem
   - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   
   - git submodule update --init --recursive
-  - bundle install
+  - bundle install --verbose
   - vcbuild.bat %VS_VERSION%
 
 test_script:
