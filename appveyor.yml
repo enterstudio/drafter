@@ -8,26 +8,13 @@ environment:
 install:
   - set PATH=C:\Ruby22\bin;%PATH%
 
-before_test:
-  - ruby -v
-  - gem -v
-  - bundle -v
-
 build_script:
   - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
   - curl -O https://curl.haxx.se/ca/cacert.pem
-#  - echo %cd%
   - SET SSL_CERT_FILE=%cd%\cacert.pem
-#  - dir %SSL_CERT_FILE%
-  
-#  - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
-#  - gem install --local rubygems-update-2.7.7.gem
-#  - update_rubygems
-   
-#  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   
   - git submodule update --init --recursive
-  - bundle install --verbose
+  - bundle install
   - vcbuild.bat %VS_VERSION%
 
 test_script:
