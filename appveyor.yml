@@ -12,9 +12,9 @@ build_script:
   - SET SSL_CERT_FILE=%cd%\cacert.pem
   - echo %SSL_CERT_FILE%
   
-   - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
-   - gem install --local rubygems-update-2.7.7.gem
-   - update_rubygems
+  - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
+  - gem install --local rubygems-update-2.7.7.gem
+  - update_rubygems
    
   - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   
