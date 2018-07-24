@@ -24,7 +24,7 @@ build_script:
 #  - gem install --local rubygems-update-2.7.7.gem
 #  - update_rubygems
    
-  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
+#  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   
   - git submodule update --init --recursive
   - bundle install --verbose
