@@ -1,12 +1,12 @@
 # Operating system (build VM template)
 os: Visual Studio 2015 CTP
 
-- install
-  - set PATH=C:\Ruby22\bin;%PATH%
-
 environment:
   matrix:
     - VS_VERSION: MSVC2015
+
+install
+  - set PATH=C:\Ruby22\bin;%PATH%
 
 before_test:
   - ruby -v
