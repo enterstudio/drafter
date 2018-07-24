@@ -5,7 +5,7 @@ environment:
   matrix:
     - VS_VERSION: MSVC2015
 
-install
+install:
   - set PATH=C:\Ruby22\bin;%PATH%
 
 before_test:
