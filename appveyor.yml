@@ -13,7 +13,6 @@ build_script:
   - SET SSL_CERT_FILE=%cd%\cacert.pem
   
   - git submodule update --init --recursive
-#  - rm Gemfile.lock
   - bundle install
   - bundle update ffi
   - vcbuild.bat %VS_VERSION%
