@@ -15,9 +15,9 @@ before_test:
 
 build_script:
   - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
-#  - curl -O https://curl.haxx.se/ca/cacert.pem
+  - curl -O https://curl.haxx.se/ca/cacert.pem
 #  - echo %cd%
-#  - SET SSL_CERT_FILE=%cd%\cacert.pem
+  - SET SSL_CERT_FILE=%cd%\cacert.pem
 #  - dir %SSL_CERT_FILE%
   
 #  - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
