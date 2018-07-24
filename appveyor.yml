@@ -8,8 +8,8 @@ environment:
     - VS_VERSION: MSVC2015
 
 build_script:
-  - gem install bundler 
-  - gem update --system
+  - curl -O https://rubygems.org/gems/rubygems-update-2.7.7.gem
+  - gem install --local rubygems-update-2.7.6.gem
   - git submodule update --init --recursive
 #  - ruby -ropen-uri -e 'eval open("https://rubygems.org").read'
   - bundle install
