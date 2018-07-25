@@ -14,7 +14,7 @@ build_script:
   
   - git submodule update --init --recursive
   - bundle install
-#  - bundle update ffi
+  - bundle update ffi
 #  - bundle update gherkin
   - vcbuild.bat %VS_VERSION%
 
