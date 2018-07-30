@@ -13,8 +13,8 @@ build_script:
   - SET SSL_CERT_FILE=%cd%\cacert.pem
   
   - git submodule update --init --recursive
-  - bundle install
-  - bundle update ffi
+  - bundle install --path bundle
+#  - bundle update ffi
 #  - bundle update gherkin
   - vcbuild.bat %VS_VERSION%
 
