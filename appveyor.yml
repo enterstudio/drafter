@@ -13,12 +13,15 @@ build_script:
   - SET SSL_CERT_FILE=%cd%\cacert.pem
   
   - git submodule update --init --recursive
-  - rm Gemfile.lock
+#  - rm Gemfile.lock
   - bundle install --path bundle
+  
 #  - bundle update ffi
 #  - bundle update gherkin
   - vcbuild.bat %VS_VERSION%
 
 test_script:
+  - set PATH=C:\Ruby193\bin;%PATH%
+
   - vcbuild.bat %VS_VERSION% test
   - vcbuild.bat %VS_VERSION% inttest
