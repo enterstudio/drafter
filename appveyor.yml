@@ -23,7 +23,7 @@ build_script:
   - vcbuild.bat %VS_VERSION%
 
 test_script:
-  - set PATH=C:\Ruby193\bin;%PATH%
+#  - set PATH=C:\Ruby193\bin;%PATH%
 
   - vcbuild.bat %VS_VERSION% test
   - vcbuild.bat %VS_VERSION% inttest
