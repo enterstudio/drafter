@@ -138,6 +138,7 @@ if defined inttest goto run-integration-test
 goto success
 
 :run-integration-test
+copy %work_dir%\build\%config%\drafter.exe .
 if "%config%"=="Debug" (
 SET "Replacement=      ENV['PATH'] = "../../build/Debug""
 goto :run-cucumber
