@@ -23,6 +23,7 @@ set target_arch=ia32
 set noprojgen=
 set nobuild=
 set test=
+set work_dir=%~dp0
 
 :next-arg
 if "%1"=="" goto args-done
