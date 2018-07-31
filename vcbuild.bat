@@ -138,14 +138,11 @@ if defined inttest goto run-integration-test
 goto success
 
 :run-integration-test
-set WDIR= %~dp0
 if "%config%"=="Debug" (
 SET "Replacement=      ENV['PATH'] = "../../build/Debug""
-set PATH=%WDIR%/build/Debug;%PATH%
 goto :run-cucumber
 )
 SET "Replacement=      ENV['PATH'] = "../../build/Release""
-set PATH=%WDIR%/build/Release;%PATH%
 goto :run-cucumber
 
 :run-cucumber
