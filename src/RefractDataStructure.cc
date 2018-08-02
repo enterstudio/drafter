@@ -745,8 +745,8 @@ namespace
             }
 
             auto valuesInfo = Merge<EnumElement>()(std::move(data.values));
-            auto samplesInfo = Merge<EnumElement>()(std::move(CloneElementInfoContainer<T>(data.samples)));
-            auto defaultInfo = Merge<EnumElement>()(std::move(CloneElementInfoContainer<T>(data.defaults)));
+            auto samplesInfo = Merge<EnumElement>()(CloneElementInfoContainer<T>(data.samples));
+            auto defaultInfo = Merge<EnumElement>()(CloneElementInfoContainer<T>(data.defaults));
 
             dsd::Array enums;
 
